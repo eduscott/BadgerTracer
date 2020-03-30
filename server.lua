@@ -71,11 +71,11 @@ AddEventHandler('playerConnecting', function(playerName, deferrals)
             local players = GetAllPlayers()
             for i=1, #players do
                 if IsPlayerAceAllowed(players[i], 'BadgerTracer.Access') then 
-                    TriggerClientEvent('chatMessage', players[i], prefix .. "Player ^1" .. GetPlayerName(src) .. " ^3used to be named ^1" ..
+                    TriggerClientEvent('chatMessage', players[i], prefix .. "O jogador ^1" .. GetPlayerName(src) .. " ^3alterou seu nome para ^1" ..
                         playerTracker[ip])
                 end
             end
-            sendToDiscord('CHANGED NAME ALERT', "Player __" .. GetPlayerName(src) .. "__ used to be named __" ..
+            sendToDiscord('ALERTA DE ALTERAÇÃO DE NOME', "O Jogador __" .. GetPlayerName(src) .. "__ alterou seu nome para __" ..
                         playerTracker[ip] .. "__")
         end
     end 
